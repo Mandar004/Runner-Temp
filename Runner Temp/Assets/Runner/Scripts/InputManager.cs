@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -50,10 +51,11 @@ namespace HyperCasual.Runner
         {
             if (PlayerController.Instance == null)
             {
+                Debug.Log("Null");
                 return;
             }
 
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
             m_InputPosition = Mouse.current.position.ReadValue();
 
             if (Mouse.current.leftButton.isPressed)
@@ -68,7 +70,8 @@ namespace HyperCasual.Runner
             {
                 m_HasInput = false;
             }
-#else
+
+# elif Android 
             if (Touch.activeTouches.Count > 0)
             {
                 m_InputPosition = Touch.activeTouches[0].screenPosition;
@@ -84,7 +87,23 @@ namespace HyperCasual.Runner
             {
                 m_HasInput = false;
             }
-#endif
+#endif*/
+
+            m_InputPosition = Mouse.current.position.ReadValue();
+          //  Debug.Log("M_Input" + m_InputPosition);
+
+            if (Mouse.current.leftButton.isPressed)
+            {
+                if (!m_HasInput)
+                {
+                    m_PreviousInputPosition = m_InputPosition;
+                }
+                m_HasInput = true;
+            }
+            else
+            {
+                m_HasInput = false;
+            }
 
             if (m_HasInput)
             {
