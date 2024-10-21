@@ -55,54 +55,51 @@ namespace HyperCasual.Runner
                 return;
             }
 
-/*#if UNITY_EDITOR
-            m_InputPosition = Mouse.current.position.ReadValue();
+            /*#if UNITY_EDITOR
+                        m_InputPosition = Mouse.current.position.ReadValue();
+                        Debug.Log("Unity");
+                        if (Mouse.current.leftButton.isPressed)
+                        {
+                            if (!m_HasInput)
+                            {
+                                m_PreviousInputPosition = m_InputPosition;
+                            }
+                            m_HasInput = true;
+                        }
+                        else
+                        {
+                            m_HasInput = false;
+                        }
 
-            if (Mouse.current.leftButton.isPressed)
-            {
-                if (!m_HasInput)
-                {
-                    m_PreviousInputPosition = m_InputPosition;
-                }
-                m_HasInput = true;
-            }
-            else
-            {
-                m_HasInput = false;
-            }
+            # elif Android 
+                        Debug.Log("Android");
+                        if (Touch.activeTouches.Count > 0)
+                        {
+                            m_InputPosition = Touch.activeTouches[0].screenPosition;
 
-# elif Android 
-            if (Touch.activeTouches.Count > 0)
-            {
-                m_InputPosition = Touch.activeTouches[0].screenPosition;
+                            if (!m_HasInput)
+                            {
+                                m_PreviousInputPosition = m_InputPosition;
+                            }
 
-                if (!m_HasInput)
-                {
-                    m_PreviousInputPosition = m_InputPosition;
-                }
-                
-                m_HasInput = true;
-            }
-            else
-            {
-                m_HasInput = false;
-            }
-#endif*/
+                            m_HasInput = true;
+                        }
+                        else
+                        {
+                            m_HasInput = false;
+                        }
+            #endif*/
 
-            m_InputPosition = Mouse.current.position.ReadValue();
-          //  Debug.Log("M_Input" + m_InputPosition);
-
-            if (Mouse.current.leftButton.isPressed)
+            // Detect if running on mobile or editor
+            if (Application.platform == RuntimePlatform.WebGLPlayer || Application.isEditor)
             {
-                if (!m_HasInput)
-                {
-                    m_PreviousInputPosition = m_InputPosition;
-                }
-                m_HasInput = true;
+                        Debug.Log("Webgl");
+                HandleMouseInput();
             }
-            else
+            else if (Application.isMobilePlatform)
             {
-                m_HasInput = false;
+                        Debug.Log("Android");
+                HandleTouchInput();
             }
 
             if (m_HasInput)
@@ -117,6 +114,44 @@ namespace HyperCasual.Runner
 
             m_PreviousInputPosition = m_InputPosition;
         }
+        // Handles input for mouse (for Editor)
+        void HandleMouseInput()
+        {
+            m_InputPosition = Mouse.current.position.ReadValue();
+            if (Mouse.current.leftButton.isPressed)
+            {
+                if (!m_HasInput)
+                {
+                    m_PreviousInputPosition = m_InputPosition;
+                }
+                m_HasInput = true;
+            }
+            else
+            {
+                m_HasInput = false;
+            }
+        }
+
+        // Handles touch input for mobile devices
+        void HandleTouchInput()
+        {
+            if (Touch.activeTouches.Count > 0)
+            {
+                // Get the first touch input (for single-finger control)
+                m_InputPosition = Touch.activeTouches[0].screenPosition;
+
+                if (!m_HasInput)
+                {
+                    m_PreviousInputPosition = m_InputPosition;
+                }
+                m_HasInput = true;
+            }
+            else
+            {
+                m_HasInput = false;
+            }
+        }
     }
+
 }
 
