@@ -22,6 +22,7 @@ namespace HyperCasual.Runner
         /// </summary>
         public static GameManager Instance => s_Instance;
         static GameManager s_Instance;
+        public bool IsMobile = false;
 
         [SerializeField]
         AbstractGameEvent m_WinEvent;

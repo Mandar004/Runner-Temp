@@ -55,51 +55,38 @@ namespace HyperCasual.Runner
                 return;
             }
 
-            /*#if UNITY_EDITOR
-                        m_InputPosition = Mouse.current.position.ReadValue();
-                        Debug.Log("Unity");
-                        if (Mouse.current.leftButton.isPressed)
-                        {
-                            if (!m_HasInput)
-                            {
-                                m_PreviousInputPosition = m_InputPosition;
-                            }
-                            m_HasInput = true;
-                        }
-                        else
-                        {
-                            m_HasInput = false;
-                        }
 
-            # elif Android 
-                        Debug.Log("Android");
-                        if (Touch.activeTouches.Count > 0)
-                        {
-                            m_InputPosition = Touch.activeTouches[0].screenPosition;
-
-                            if (!m_HasInput)
-                            {
-                                m_PreviousInputPosition = m_InputPosition;
-                            }
-
-                            m_HasInput = true;
-                        }
-                        else
-                        {
-                            m_HasInput = false;
-                        }
-            #endif*/
-
-            // Detect if running on mobile or editor
-            if (Application.platform == RuntimePlatform.WebGLPlayer || Application.isEditor)
+            /*   if (SystemInfo.deviceType == DeviceType.Desktop)
+               {
+                   // Use mouse and keyboard controls for PC
+                   HandleMouseInput();
+               }
+               else if (SystemInfo.deviceType == DeviceType.Handheld)
+               {
+                   HandleTouchInput();
+                   // Use touch controls for mobile devices
+               }
+               // Detect if running on mobile or editor
+               if (Application.platform == RuntimePlatform.WebGLPlayer || Application.isEditor)
+               {
+                           Debug.Log("Webgl");
+                  // HandleMouseInput();
+               }
+               else if (Application.isMobilePlatform)
+               {
+                           Debug.Log("Android");
+                //   HandleTouchInput();
+               }*/
+            if (GameManager.Instance.IsMobile)
             {
-                        Debug.Log("Webgl");
-                HandleMouseInput();
-            }
-            else if (Application.isMobilePlatform)
-            {
-                        Debug.Log("Android");
                 HandleTouchInput();
+                           Debug.Log("Android");
+                
+            }
+            else
+            {
+                           Debug.Log("Webgl");
+                HandleMouseInput();
             }
 
             if (m_HasInput)
