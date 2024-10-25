@@ -63,7 +63,8 @@ namespace HyperCasual.Gameplay
             for (int i = 0; i < m_Buttons.Count; i++)
             {
                 var button = m_Buttons[i];
-                var unlocked = i <= levelProgress;
+              //  var unlocked = i <= levelProgress;
+                var unlocked = i <= 4;
 #if UNITY_EDITOR
                 unlocked = unlocked || m_UnlockAllLevels;
 #endif
