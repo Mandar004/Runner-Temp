@@ -525,6 +525,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5280667181393737275}
     m_Modifications:
+    - target: {fileID: 1667145811566863050, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667145811566863050, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667145811566863050, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3121393050713128152}
+    - target: {fileID: 1667145811566863050, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667145811566863050, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OtherGender
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667145811566863050, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AvatarSelectByGender, Unity.Hypercasual
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667145811566863050, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2160776244065326445, guid: beb8f22d4b773be4db472a34a60f0e1a,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -585,6 +620,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -320
       objectReference: {fileID: 0}
+    - target: {fileID: 2322294986389068017, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322294986389068017, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322294986389068017, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3121393050713128152}
+    - target: {fileID: 2322294986389068017, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322294986389068017, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MaleGender
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322294986389068017, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AvatarSelectByGender, Unity.Hypercasual
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322294986389068017, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2957013269649424351, guid: beb8f22d4b773be4db472a34a60f0e1a,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -639,6 +709,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866278798260380741, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866278798260380741, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866278798260380741, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3121393050713128152}
+    - target: {fileID: 4866278798260380741, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866278798260380741, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FemaleGender
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866278798260380741, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AvatarSelectByGender, Unity.Hypercasual
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866278798260380741, guid: beb8f22d4b773be4db472a34a60f0e1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8059843806184301794, guid: beb8f22d4b773be4db472a34a60f0e1a,
         type: 3}
@@ -743,7 +848,7 @@ PrefabInstance:
     - target: {fileID: 8059843806184301795, guid: beb8f22d4b773be4db472a34a60f0e1a,
         type: 3}
       propertyPath: m_Name
-      value: Avatar-select
+      value: AvatarSelectByGender
       objectReference: {fileID: 0}
     - target: {fileID: 8059843806184301795, guid: beb8f22d4b773be4db472a34a60f0e1a,
         type: 3}
@@ -765,6 +870,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beb8f22d4b773be4db472a34a60f0e1a, type: 3}
+--- !u!114 &3121393050713128152 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4252897801178298727, guid: beb8f22d4b773be4db472a34a60f0e1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1176634076650882495}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191406245844230492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4968aa21ac4cd4dabfc7d9e659475a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &9191406245844230492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8059843806184301795, guid: beb8f22d4b773be4db472a34a60f0e1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1176634076650882495}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &9191406245844230493 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8059843806184301794, guid: beb8f22d4b773be4db472a34a60f0e1a,
@@ -894,6 +1017,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4571720081935651435, guid: 54814bc3b927146708f6d9559a750bed,
+        type: 3}
+      propertyPath: SelectGender
+      value: 
+      objectReference: {fileID: 9191406245844230492}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

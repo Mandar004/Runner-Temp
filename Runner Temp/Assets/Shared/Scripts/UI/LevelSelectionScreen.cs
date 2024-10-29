@@ -25,6 +25,10 @@ namespace HyperCasual.Gameplay
         AbstractGameEvent m_NextLevelEvent;
         [SerializeField]
         AbstractGameEvent m_BackEvent;
+
+        [SerializeField]
+        GameObject SelectGender;
+
 #if UNITY_EDITOR
         [SerializeField]
         bool m_UnlockAllLevels;
@@ -77,10 +81,12 @@ namespace HyperCasual.Gameplay
             if (startingIndex < 0)
                 throw new Exception("Button is not initialized");
 
-            SequenceManager.Instance.SetStartingLevel(startingIndex);
-            m_NextLevelEvent.Raise();
+            SelectGender.SetActive(true);
+            //SequenceManager.Instance.SetStartingLevel(startingIndex);
+            //m_NextLevelEvent.Raise();
         }
         
+
         void OnQuickPlayButtonClicked()
         {
             OnClick(SaveManager.Instance.LevelProgress);

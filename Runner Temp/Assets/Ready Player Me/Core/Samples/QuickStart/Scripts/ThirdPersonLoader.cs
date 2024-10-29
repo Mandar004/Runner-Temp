@@ -9,7 +9,7 @@ namespace ReadyPlayerMe.Samples.QuickStart
         private readonly Vector3 avatarPositionOffset = new Vector3(0, -0.08f, 0);
         
         [SerializeField][Tooltip("RPM avatar URL or shortcode to load")] 
-        private string avatarUrl;
+        public static string avatarUrl;
         private GameObject avatar;
         private AvatarObjectLoader avatarObjectLoader;
         [SerializeField][Tooltip("Animator to use on loaded avatar")] 
@@ -33,8 +33,8 @@ namespace ReadyPlayerMe.Samples.QuickStart
             }
             if (loadOnStart)
             {
-                LoadAvatar(avatarUrl);
             }
+                LoadAvatar(avatarUrl);
         }
 
         private void OnLoadFailed(object sender, FailureEventArgs args)
