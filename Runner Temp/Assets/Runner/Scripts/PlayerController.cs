@@ -1,5 +1,4 @@
-using ReadyPlayerMe.Core;
-using ReadyPlayerMe.Samples.QuickStart;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,6 +20,8 @@ namespace HyperCasual.Runner
         
         [SerializeField]
         Animator m_Animator;
+
+
 
         [SerializeField]
         SkinnedMeshRenderer m_SkinnedMeshRenderer;
@@ -106,24 +107,9 @@ namespace HyperCasual.Runner
         public float MaxXPosition => m_MaxXPosition;
 
 
-        [SerializeField]
-        [Tooltip("RPM avatar URL or shortcode to load")]
-        public  string avatarUrl;
-        [SerializeField]
-        private GameObject avatar;
-        private AvatarObjectLoader avatarObjectLoader;
-        [SerializeField]
-        [Tooltip("Animator to use on loaded avatar")]
-        private RuntimeAnimatorController animatorController;
-        [SerializeField]
-        [Tooltip("If true it will try to load avatar from avatarUrl on start")]
-        private bool loadOnStart = true;
-        [SerializeField]
-        [Tooltip("Preview avatar to display until avatar loads. Will be destroyed after new avatar is loaded")]
-        private GameObject previewAvatar;
+       
 
-        public event Action OnLoadComplete;
-        private readonly Vector3 avatarPositionOffset = new Vector3(0, -0.08f, 0);
+     
 
         void Awake()
         {
@@ -143,7 +129,7 @@ namespace HyperCasual.Runner
         /// </summary>
         public void Initialize()
         {
-            LoadAvatar(avatarUrl);
+           
             m_Transform = transform;
             m_StartPosition = m_Transform.position;
             m_DefaultScale = m_Transform.localScale;
@@ -163,48 +149,7 @@ namespace HyperCasual.Runner
         }
 
 
-        private void OnLoadFailed(object sender, FailureEventArgs args)
-        {
-            OnLoadComplete?.Invoke();
-        }
-
-        private void OnLoadCompleted(object sender, CompletionEventArgs args)
-        {
-            if (previewAvatar != null)
-            {
-                Destroy(previewAvatar);
-                previewAvatar = null;
-            }
-            SetupAvatar(args.Avatar);
-            OnLoadComplete?.Invoke();
-        }
-
-        private void SetupAvatar(GameObject targetAvatar)
-        {
-            if (avatar != null)
-            {
-                Destroy(avatar);
-            }
-
-            avatar = targetAvatar;
-            // Re-parent and reset transforms
-            avatar.transform.parent = transform;
-            avatar.transform.localPosition = avatarPositionOffset;
-            avatar.transform.localRotation = Quaternion.Euler(0, 0, 0);
-
-            var controller = GetComponent<ThirdPersonController>();
-            if (controller != null)
-            {
-                controller.Setup(avatar, animatorController);
-            }
-        }
-
-        public void LoadAvatar(string url)
-        {
-            //remove any leading or trailing spaces
-            avatarUrl = url.Trim(' ');
-            avatarObjectLoader.LoadAvatar(avatarUrl);
-        }
+     
         /// <summary>
         /// Returns the current default speed based on the currently
         /// selected PlayerSpeed preset.

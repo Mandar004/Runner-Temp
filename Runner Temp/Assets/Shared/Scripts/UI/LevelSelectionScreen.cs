@@ -81,9 +81,9 @@ namespace HyperCasual.Gameplay
             if (startingIndex < 0)
                 throw new Exception("Button is not initialized");
 
-            SelectGender.SetActive(true);
-            //SequenceManager.Instance.SetStartingLevel(startingIndex);
-            //m_NextLevelEvent.Raise();
+           // SelectGender.SetActive(true);
+           SequenceManager.Instance.SetStartingLevel(startingIndex);
+           m_NextLevelEvent.Raise();
         }
         
 
